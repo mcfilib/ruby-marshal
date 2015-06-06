@@ -39,7 +39,7 @@ import Prelude
 import qualified Data.ByteString as BS
 import qualified Data.Vector     as V
 
--- | Deserialises Marshal version.
+-- | Deserialises <http://ruby-doc.org/core-2.2.0/Marshal.html Marshal> version.
 getMarshalVersion :: Get (Word8, Word8)
 getMarshalVersion = label "Marshal Version" $
   getWord8 >>= \x -> getWord8 >>= \y -> return (x, y)
