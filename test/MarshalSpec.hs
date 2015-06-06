@@ -94,3 +94,8 @@ spec = describe "load" $ do
     it "should parse" $ do
       object <- loadBin "test/bin/symbol.bin"
       object `shouldBe` Just (RSymbol "hello_haskell")
+
+  context "when we have [:hello, :haskell, :hello, :haskell]," $
+    it "should parse" $ do
+      object <- loadBin "test/bin/symbolArray.bin"
+      object `shouldBe` Just (RArray $ V.fromList [RSymbol "hello", RSymbol "haskell", RSymbol "hello", RSymbol "haskell"])
