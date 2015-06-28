@@ -44,5 +44,7 @@ getRubyObject = getMarshalVersion >> go
                                      _       -> return $ RError Unsupported
       FloatC   -> RFloat <$> getFloat
       SymbolC  -> RSymbol <$> getSymbol
+      -- the following line is currently broken. we want to resolve values that
+      -- index the cache to concrete values.
       SymlinkC -> RFixnum <$> getFixnum
       _        -> return $ RError Unsupported
