@@ -36,13 +36,14 @@ data RubyObject
 type Cache = Vector RubyObject
 
 -- | Allow easy pattern matching of values.
-pattern NilC    = 48
-pattern TrueC   = 84
-pattern FalseC  = 70
-pattern FixnumC = 105
-pattern ArrayC  = 91
-pattern HashC   = 123
-pattern IvarC   = 73
-pattern StringC = 34
-pattern FloatC  = 102
-pattern SymbolC = 58
+pattern NilC     = 48
+pattern TrueC    = 84
+pattern FalseC   = 70
+pattern FixnumC  = 105
+pattern ArrayC   = 91
+pattern HashC    = 123
+pattern IvarC    = 73
+pattern StringC  = 34
+pattern FloatC   = 102
+pattern SymbolC  = 58
+pattern SymlinkC = 59
