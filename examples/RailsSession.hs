@@ -2,11 +2,11 @@
 
 module Main where
 
-import           Data.ByteString (ByteString)
-import qualified Data.ByteString as BS
-import qualified Data.Map.Strict as DM
+import           Data.ByteString   (ByteString)
+import qualified Data.ByteString   as BS
+import qualified Data.Map.Strict   as DM
 import           Data.Ruby.Marshal
-import           System.Directory (getCurrentDirectory)
+import           System.Directory  (getCurrentDirectory)
 
 lookupUserID :: (ByteString, RubyStringEncoding)
              -> RubyObject
