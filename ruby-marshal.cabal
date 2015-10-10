@@ -47,6 +47,8 @@ library
     , Data.Ruby.Marshal.Types
 
 test-suite spec
+  main-is:
+    Spec.hs
   ghc-options:
     -Wall
   hs-source-dirs:
@@ -63,9 +65,5 @@ test-suite spec
     , vector
   default-language:
     Haskell2010
-  other-modules:
-    Spec
-  main-is:
-    Spec.hs
   type:
     exitcode-stdio-1.0
