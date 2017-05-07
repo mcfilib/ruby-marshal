@@ -27,12 +27,11 @@ create an issue or open a pull request using the guidelines below.
 
 module Main where
 
-import Data.Ruby.Marshal
-import Data.ByteString  (ByteString)
-import System.Directory (getCurrentDirectory)
-
+import           Data.ByteString (ByteString)
 import qualified Data.ByteString as BS
 import qualified Data.Map.Strict as DM
+import           Data.Ruby.Marshal
+import           System.Directory (getCurrentDirectory)
 
 lookupUserID :: (ByteString, RubyStringEncoding)
              -> RubyObject
