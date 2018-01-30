@@ -64,7 +64,14 @@ test-suite spec
   default-language:
     Haskell2010
   other-modules:
-    Spec
+    Data.Ruby.Marshal
+    Data.Ruby.Marshal.Encoding
+    Data.Ruby.Marshal.Get
+    Data.Ruby.Marshal.Int
+    Data.Ruby.Marshal.Monad
+    Data.Ruby.Marshal.RubyObject
+    Data.Ruby.Marshal.Types
+    MarshalSpec
   main-is:
     Spec.hs
   type:
