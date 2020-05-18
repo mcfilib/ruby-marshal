@@ -17,6 +17,7 @@
 module Data.Ruby.Marshal.Monad where
 
 import           Control.Applicative
+import           Control.Monad.Fail           (MonadFail)
 import           Control.Monad.State.Strict   (MonadState, StateT, get, gets,
                                                lift, put)
 import           Data.Ruby.Marshal.RubyObject (RubyObject (..))
@@ -28,7 +29,7 @@ import           Prelude
 -- | Marshal monad endows the underlying Get monad with State.
 newtype Marshal a = Marshal {
   runMarshal :: StateT Cache Get a
-} deriving (Functor, Applicative, Monad, MonadState Cache)
+} deriving (Functor, Applicative, Monad, MonadFail, MonadState Cache)
 
 -- | Lift Get monad into Marshal monad.
 liftMarshal :: Get a -> Marshal a
