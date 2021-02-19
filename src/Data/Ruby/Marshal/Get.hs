@@ -143,7 +143,7 @@ getIVar g = marshalLabel "IVar" $ do
 getObjectLink :: Marshal (RubyObject, RubyStringEncoding)
 getObjectLink = marshalLabel "ObjectLink" $ do
   index <- getFixnum
-  maybeObject <- readObject index
+  maybeObject <- readObject (index - 1)
   case maybeObject of
     Just (RIVar x) -> return x
     _              -> fail "invalid object link"

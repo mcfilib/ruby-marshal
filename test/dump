@@ -4,6 +4,9 @@ unless RUBY_VERSION >= "2.0.0"
   raise "Please upgrade to at least Ruby 2.0.0."
 end
 
+hello = "hello"
+haskell = "haskell"
+
 TYPES = {
   "0"                => 0,
   "2048"             => 2048,
@@ -24,10 +27,10 @@ TYPES = {
   "railsCookie"      => { "session_id" => "ba0844151d",
                           "_csrf_token" => "a9212445c5",
                           "user_id" => "1" },
-  "stringArray"      => ["hello", "haskell", "hello", "haskell"],
+  "stringArray"      => [hello, haskell, hello, haskell],
   "symbol"           => :hello_haskell,
   "symbolArray"      => [:hello, :haskell, :hello, :haskell],
-  "true"             => true
+  "true"             => true,
 }
 
 def dump(name, x)
