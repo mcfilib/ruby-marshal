@@ -6,6 +6,8 @@ end
 
 hello = "hello"
 haskell = "haskell"
+someHash = {}
+someArray = []
 
 TYPES = {
   "0"                => 0,
@@ -31,6 +33,7 @@ TYPES = {
   "symbol"           => :hello_haskell,
   "symbolArray"      => [:hello, :haskell, :hello, :haskell],
   "true"             => true,
+  "objectsAndStringReferences" => [someHash, someArray, hello, haskell, someHash, someArray, hello, haskell],
 }
 
 def dump(name, x)
