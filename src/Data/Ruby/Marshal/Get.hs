@@ -25,6 +25,7 @@ module Data.Ruby.Marshal.Get (
 
 import           Control.Applicative
 import           Control.Monad              (liftM2, when)
+import           Data.Monoid                ((<>))
 import qualified Data.ByteString            as BS
 import           Data.Ruby.Marshal.Encoding (toEnc)
 import           Data.Ruby.Marshal.Int
