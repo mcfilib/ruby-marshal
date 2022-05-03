@@ -31,7 +31,7 @@ library
     , fail        >= 4.9.0.0 && < 4.10
     , string-conv >= 0.1     && <= 0.2
     , mtl         >= 2.1.0   && <= 2.3.0
-    , vector      >= 0.10.0  && <= 0.12.1.2
+    , vector      >= 0.10.0  && <  0.13
   default-language:
     Haskell2010
   exposed-modules:
